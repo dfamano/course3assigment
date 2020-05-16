@@ -1,0 +1,111 @@
+---
+title: "Codebook"
+author: "me"
+date: "5/16/2020"
+output: pdf_document
+---
+
+The codebook for the datasets tidy_dataset and summarydata follow mainly the description provided by the text in the features_info.txt archive provided with the original data and transcripted partially below for easier reference. As only the data with mean and standard deviation was extracted, only the relevant descriptions were extracted from the features_info.txt
+
+summarydata is the name of the dataset as per item 5 instructions. It just creates a new database from the tidy_dataset grouping by each activity (6) and subject (30), therefore 180 rows long, taking the average across each variable 
+
+Feature Selection 
+=================
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+=================
+The set of variables that were estimated from these signals are: 
+mean: Mean value
+std: Standard deviation
+meanFreq: Weighted average of the frequency components to obtain a mean frequency
+activity: description of the activity (total of 6)
+subject: ID of each subject given by a number 1:30
+=================
+
+Below the complete list of variables in the tidy_dataset
+
+Variable
+[1]  "tBodyAccelerometer.mean...X"               
+[2]  "tBodyAccelerometer.mean...Y"               
+[3]  "tBodyAccelerometer.mean...Z"               
+[4]  "tBodyAccelerometer.std...X"                
+[5]  "tBodyAccelerometer.std...Y"                
+[6]  "tBodyAccelerometer.std...Z"                
+[7]  "tGravityAccelerometer.mean...X"            
+[8]  "tGravityAccelerometer.mean...Y"            
+[9]  "tGravityAccelerometer.mean...Z"            
+[10] "tGravityAccelerometer.std...X"             
+[11] "tGravityAccelerometer.std...Y"             
+[12] "tGravityAccelerometer.std...Z"             
+[13] "tBodyAccelerometerJerk.mean...X"           
+[14] "tBodyAccelerometerJerk.mean...Y"           
+[15] "tBodyAccelerometerJerk.mean...Z"           
+[16] "tBodyAccelerometerJerk.std...X"            
+[17] "tBodyAccelerometerJerk.std...Y"            
+[18] "tBodyAccelerometerJerk.std...Z"            
+[19] "tBodyGyroscope.mean...X"                   
+[20] "tBodyGyroscope.mean...Y"                   
+[21] "tBodyGyroscope.mean...Z"                   
+[22] "tBodyGyroscope.std...X"                    
+[23] "tBodyGyroscope.std...Y"                    
+[24] "tBodyGyroscope.std...Z"                    
+[25] "tBodyGyroscopeJerk.mean...X"               
+[26] "tBodyGyroscopeJerk.mean...Y"               
+[27] "tBodyGyroscopeJerk.mean...Z"               
+[28] "tBodyGyroscopeJerk.std...X"                
+[29] "tBodyGyroscopeJerk.std...Y"                
+[30] "tBodyGyroscopeJerk.std...Z"                
+[31] "tBodyAccelerometerMagnitude.mean.."        
+[32] "tBodyAccelerometerMagnitude.std.."         
+[33] "tGravityAccelerometerMagnitude.mean.."     
+[34] "tGravityAccelerometerMagnitude.std.."      
+[35] "tBodyAccelerometerJerkMagnitude.mean.."    
+[36] "tBodyAccelerometerJerkMagnitude.std.."     
+[37] "tBodyGyroscopeMagnitude.mean.."            
+[38] "tBodyGyroscopeMagnitude.std.."             
+[39] "tBodyGyroscopeJerkMagnitude.mean.."        
+[40] "tBodyGyroscopeJerkMagnitude.std.."         
+[41] "fBodyAccelerometer.mean...X"               
+[42] "fBodyAccelerometer.mean...Y"               
+[43] "fBodyAccelerometer.mean...Z"               
+[44] "fBodyAccelerometer.std...X"                
+[45] "fBodyAccelerometer.std...Y"                
+[46] "fBodyAccelerometer.std...Z"                
+[47] "fBodyAccelerometer.meanFreq...X"           
+[48] "fBodyAccelerometer.meanFreq...Y"           
+[49] "fBodyAccelerometer.meanFreq...Z"           
+[50] "fBodyAccelerometerJerk.mean...X"           
+[51] "fBodyAccelerometerJerk.mean...Y"           
+[52] "fBodyAccelerometerJerk.mean...Z"           
+[53] "fBodyAccelerometerJerk.std...X"            
+[54] "fBodyAccelerometerJerk.std...Y"            
+[55] "fBodyAccelerometerJerk.std...Z"            
+[56] "fBodyAccelerometerJerk.meanFreq...X"       
+[57] "fBodyAccelerometerJerk.meanFreq...Y"       
+[58] "fBodyAccelerometerJerk.meanFreq...Z"       
+[59] "fBodyGyroscope.mean...X"                   
+[60] "fBodyGyroscope.mean...Y"                   
+[61] "fBodyGyroscope.mean...Z"                   
+[62] "fBodyGyroscope.std...X"                    
+[63] "fBodyGyroscope.std...Y"                    
+[64] "fBodyGyroscope.std...Z"                    
+[65] "fBodyGyroscope.meanFreq...X"               
+[66] "fBodyGyroscope.meanFreq...Y"               
+[67] "fBodyGyroscope.meanFreq...Z"               
+[68] "fBodyAccelerometerMagnitude.mean.."        
+[69] "fBodyAccelerometerMagnitude.std.."         
+[70] "fBodyAccelerometerMagnitude.meanFreq.."    
+[71] "fBodyAccelerometerJerkMagnitude.mean.."    
+[72] "fBodyAccelerometerJerkMagnitude.std.."     
+[73] "fBodyAccelerometerJerkMagnitude.meanFreq.."
+[74] "fBodyGyroscopeMagnitude.mean.."            
+[75] "fBodyGyroscopeMagnitude.std.."             
+[76] "fBodyGyroscopeMagnitude.meanFreq.."        
+[77] "fBodyGyroscopeJerkMagnitude.mean.."        
+[78] "fBodyGyroscopeJerkMagnitude.std.."         
+[79] "fBodyGyroscopeJerkMagnitude.meanFreq.." 
+[80] "activity"                                  
+[81] "subject"
